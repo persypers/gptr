@@ -1,11 +1,12 @@
 var utils = require("Utils");
+var model = require("Model");
 
 cc.Class({
     extends: cc.Component,
 
     properties: {
         tilePrefab : cc.Prefab,
-        skillPrefab : cc.Prefab,
+        skillBoxPrefab : cc.Prefab,
         chainContent : cc.Node,
         tileSelectorRoot : cc.Node,
         tileSelectorContent : cc.Node,
@@ -15,82 +16,69 @@ cc.Class({
 
     // use this for initialization
     start: function () {
-        var tile = utils.randomTile();
-        var tileView = cc.instantiate(this.tilePrefab);
-        tileView.getComponent("TileView").set(tile);
-        tileView.parent = chainContent;
+        cc.scene = this;
+        model.init();
+
+        var trendTile = utils.randomTile();
+        this.nextSkill(trendTile);
     },
 
-    begin: function(tile) {
-        this.tile = tile;
-        this.skill = null;
-        for(var i = this.chainContent.children.length - 1; i >=0; i--) {
-            this.chainContent.children[i].destroy();
-        }
-        var firstTileView = cc.instantiate(this.tilePrefab);
-        firstTileView.getComponent("TileView").set(tile);
-        firstTileView.parent = this.chainContent;
-    },
+    nextSkill : function(firstTile) {
+        var skillBox = cc.instantiate(this.skillBoxPrefab).getComponent("SkillBox");
+        skillBox.node.parent = this.chainContent;
+        this.skillBox = skillBox;
+        skillBox.addTile(firstTile);
 
-    onSelectSkill : function() {
-        var availableSkills = [];
-        var tile = this.tile;
-        for(var k in Skills) {
-            var skill = Skills[k];
-            var subset = skill.rule[tile];
-            if(subset instanceof Array || Tiles[subset]) {
-                availableSkills.push(skill);
-            }
-        }
-        for(var i = this.skillSelectorContent.children.length - 1; i >=0; i--) {
-            this.skillSelectorContent.children[i].destroy();
-        }
-
-        for(var i = 0; i < availableSkills.length; i++) {
-            var skillView = cc.instantiate(this.skillPrefab);
-            skillView.getComponent("SkillView").set(availableSkills[i]);
-            skillView.parent = this.skillSelectorContent;
-        }
+        this.tileSelectorRoot.active = false;
         this.skillSelectorRoot.active = true;
     },
 
-    onSkillSelected : function(skill) {
-        this.skill = skill;
-        var moreTiles = skill.inputLength - 1;
-        for(var i = 0; i < moreTiles; i++) {
+    onSkillSelected : function(event) {
+        console.log(event);
+        this.skillBox.setSkill(skill);
+        if(this.checkSkillBox()) return;
+        this.openTileSelection();
+    },
+
+    onTileSelected : function(event) {
+        console.log(event);
+        this.skillBox.addTile(tile);
+        if(this.checkSkillBox()) return;
+        this.openTileSelection();
+    },
+
+    openTileSelection : function() {
+        //clear prev filter screen
+        var tiles = this.tileSelectorContent.children;
+        for(var i = tiles.length - 1; i >= 0; i--) {
+            tiles[i].destroy();
+        }
+
+        tiles = [];
+        var skill = this.skillBox.skill;
+        for(var i = 0; i < model.tiles.length; i++) {
+            if(skill.apply(this.skillBox.tiles[0], model.tiles[i])) tiles.push(model.tiles[i]);
+        }
+        for(var i = 0; i < tiles.length; i++) {
             var tileView = cc.instantiate(this.tilePrefab);
-            tileView.parent = this.chainContent;
+            tileView.getComponent("TileView").set(model.tiles[i]);
+            tileView.parent = this.tileSelectorContent;
+            tileView.on(cc.Node.EventType.TOUCH_START, this.onTileSelected.bind(this));
         }
-        var skillView = cc.instantiate(this.skillPrefab);
-        skillView.getComponent("SkillView").set(skill);
-        skillView.parent = this.skillSelectorContent;
-        if(moreTiles == 0) {
-            this.applySkill;
-        }
+        this.tileSelectorRoot.active = true;
+        this.skillSelectorRoot.active = false;
     },
 
-    applySkill: function() {
-        var chainLength = this.chainContent.children.length;
-        var skillView = this.chainContent.children[chainLength - 1];
-        var skill = skillView.skill;
-        cc.assert(skillView.skill == this.skill);
-        var tiles = [];
-        for(var i = skill.inputLength; i > 0; i--) {
-            tiles.push(this.chainContent.children[chainLength - i - 1].tile);
+    checkSkillBox : function() {
+        var skill = this.skillBox.skill;
+        if(this.skillBox.tiles.length == skill.inputLength) {
+            var res = skill.apply(this.skillBox.tiles);
+            this.nextSkill(res);
+            return true;
         }
-        var result = skill.rule;
-        for(var i = 0; i < tiles.length - 1; i ++) {
-            var nextTile = tiles[i];
-            result = result[nextTile.id];
-        }
-        cc.assert(Tiles[result]);
-        this.tile = result = Tiles[result];
-        var lastTileView = cc.instantiate(this.tilePrefab);
-        lastTileView.getComponent("TileView").set(result);
-        lastTileView.parent = this.chainContent;
-    },
-
-    onSelectFact : function() {
-
     }
+
+
+
+
 });

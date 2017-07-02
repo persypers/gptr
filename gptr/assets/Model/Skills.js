@@ -14,6 +14,11 @@ imply : {
     icon : "Sprites/imply.png",
     inputLength : 2,
     apply : function(p, q) { 
+    
+    if(p instanceof Array) {
+        q = p[1];
+        p = p[0];
+    }
     // (A+B)(A+C) = (A+C) 
     // (p.a p.op p.b) (q.a q.op q.b) = (res.a res.op res.b) 
     if( 

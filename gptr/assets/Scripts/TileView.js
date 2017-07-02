@@ -5,6 +5,7 @@ cc.Class({
         iconA : cc.Sprite,
         iconB : cc.Sprite,
         iconOp : cc.Sprite,
+        text : cc.Label,
     },
 
     // use this for initialization
@@ -16,10 +17,11 @@ cc.Class({
         this.node.tile = this.tile = tile;
         var self = this;
         var spriteFrames = [tile.a.icon, tile.b.icon, tile.op.icon];
-        cc.loader.loadResArray(res, cc.SpriteFrame, function(data) {
+        cc.loader.loadResArray(spriteFrames, cc.SpriteFrame, function(err, data) {
             self.iconA.spriteFrame = data[0];
             self.iconB.spriteFrame = data[1];
             self.iconOp.spriteFrame = data[2];
         });
+        this.text.string = tile.a.text + ' ' + tile.op.text + ' ' + tile.b.text;
     }
 });

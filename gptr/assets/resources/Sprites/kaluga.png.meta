@@ -1,0 +1,30 @@
+{
+  "ver": "1.0.0",
+  "uuid": "76209879-836d-47bb-a842-fd39cf55df88",
+  "type": "sprite",
+  "wrapMode": "clamp",
+  "filterMode": "bilinear",
+  "subMetas": {
+    "kaluga": {
+      "ver": "1.0.3",
+      "uuid": "4a46e4ed-26cf-4271-9661-944de39eb8f9",
+      "rawTextureUuid": "76209879-836d-47bb-a842-fd39cf55df88",
+      "trimType": "auto",
+      "trimThreshold": 1,
+      "rotated": false,
+      "offsetX": -33,
+      "offsetY": -6.5,
+      "trimX": 0,
+      "trimY": 13,
+      "width": 84,
+      "height": 87,
+      "rawWidth": 150,
+      "rawHeight": 100,
+      "borderTop": 0,
+      "borderBottom": 0,
+      "borderLeft": 0,
+      "borderRight": 0,
+      "subMetas": {}
+    }
+  }
+}
