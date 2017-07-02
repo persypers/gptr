@@ -371,8 +371,8 @@
     },
     "_contentSize": {
       "__type__": "cc.Size",
-      "width": 140,
-      "height": 140
+      "width": 408,
+      "height": 404
     },
     "_children": [],
     "_rotationX": 0,
@@ -382,7 +382,7 @@
     "_position": {
       "__type__": "cc.Vec2",
       "x": 0,
-      "y": 456
+      "y": 397
     },
     "_skewX": 0,
     "_skewY": 0,
@@ -411,10 +411,10 @@
     },
     "_enabled": true,
     "_spriteFrame": {
-      "__uuid__": "8cdb44ac-a3f6-449f-b354-7cd48cf84061"
+      "__uuid__": "db656fdb-2331-4622-ad22-373326044a51"
     },
     "_type": 0,
-    "_sizeMode": 0,
+    "_sizeMode": 1,
     "_fillType": 0,
     "_fillCenter": {
       "__type__": "cc.Vec2",
@@ -446,9 +446,9 @@
     "_opacity": 255,
     "_color": {
       "__type__": "cc.Color",
-      "r": 0,
-      "g": 0,
-      "b": 0,
+      "r": 255,
+      "g": 255,
+      "b": 255,
       "a": 255
     },
     "_cascadeOpacityEnabled": true,
@@ -462,7 +462,7 @@
     },
     "_contentSize": {
       "__type__": "cc.Size",
-      "width": 800,
+      "width": 1280,
       "height": 100
     },
     "_children": [],
@@ -473,7 +473,7 @@
     "_position": {
       "__type__": "cc.Vec2",
       "x": 0,
-      "y": 0
+      "y": -24
     },
     "_skewX": 0,
     "_skewY": 0,
@@ -502,10 +502,10 @@
     },
     "_enabled": true,
     "_spriteFrame": {
-      "__uuid__": "5cd997d9-4892-46b2-81b0-3d1f4eb296ea"
+      "__uuid__": "d39cde15-d0b3-4312-98c5-c9e0c53484ea"
     },
     "_type": 0,
-    "_sizeMode": 0,
+    "_sizeMode": 1,
     "_fillType": 0,
     "_fillCenter": {
       "__type__": "cc.Vec2",
@@ -564,7 +564,7 @@
     "_position": {
       "__type__": "cc.Vec2",
       "x": 0,
-      "y": 0
+      "y": -29
     },
     "_skewX": 0,
     "_skewY": 0,
@@ -597,8 +597,10 @@
     "_fontSize": 40,
     "_lineHeight": 40,
     "_enableWrapText": true,
-    "_N$file": null,
-    "_isSystemFontUsed": true,
+    "_N$file": {
+      "__uuid__": "ef5df5d9-dd83-4562-987c-abf302feab44"
+    },
+    "_isSystemFontUsed": false,
     "_spacingX": 0,
     "_N$string": "Label",
     "_N$horizontalAlign": 1,
