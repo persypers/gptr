@@ -5,8 +5,6 @@ var boostertext = "Бустеры";
 cc.Class({
     extends: cc.Component,
 
-    //переключаем по клику две ноды: с выбором бустеров и с выбором видео
-
     properties: {
         boostersNode : cc.Node,
         chooseVideo : cc.Node,
@@ -22,15 +20,16 @@ cc.Class({
 
         this.buttonLabel.getComponent(cc.Label).string = boostertext;
     },
-
+    
+    
+//переключаем по клику две ноды: с выбором бустеров и с выбором видео
     onClick: function () {
         var label = this.buttonLabel.getComponent(cc.Label);
 
-        cc.log("on click!");
 
         if (VideoModeOn) {
-            cc.log("video mode on!");
-
+            //переходим в режим бустеров
+            //все кнопки на таймлайне становятся неактивными
             this.buttonLabel.getComponent(cc.Label).string = videotext;
 
             this.chooseVideo.active = false;
@@ -38,8 +37,7 @@ cc.Class({
             VideoModeOn = false;
 
         } else {
-            cc.log("video mode off!");
-
+            //переходим в режим редактированияv
             this.buttonLabel.getComponent(cc.Label).string = boostertext;
 
             this.chooseVideo.active = true;
