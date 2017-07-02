@@ -1518,8 +1518,8 @@
     "_opacity": 255,
     "_color": {
       "__type__": "cc.Color",
-      "r": 255,
-      "g": 255,
+      "r": 113,
+      "g": 238,
       "b": 255,
       "a": 255
     },
@@ -1652,7 +1652,7 @@
     },
     "_enabled": true,
     "_spriteFrame": {
-      "__uuid__": "f0048c10-f03e-4c97-b9d3-3506e1d58952"
+      "__uuid__": "5cd997d9-4892-46b2-81b0-3d1f4eb296ea"
     },
     "_type": 1,
     "_sizeMode": 0,
@@ -1677,19 +1677,19 @@
       "__id__": 37
     },
     "_enabled": true,
-    "transition": 2,
+    "transition": 1,
     "pressedColor": {
       "__type__": "cc.Color",
-      "r": 255,
+      "r": 20,
       "g": 255,
-      "b": 255,
+      "b": 76,
       "a": 255
     },
     "hoverColor": {
       "__type__": "cc.Color",
-      "r": 255,
-      "g": 255,
-      "b": 255,
+      "r": 0,
+      "g": 156,
+      "b": 37,
       "a": 255
     },
     "duration": 0.1,
@@ -1705,20 +1705,20 @@
     "_N$enableAutoGrayEffect": false,
     "_N$normalColor": {
       "__type__": "cc.Color",
-      "r": 255,
-      "g": 255,
+      "r": 113,
+      "g": 238,
       "b": 255,
       "a": 255
     },
     "_N$disabledColor": {
       "__type__": "cc.Color",
-      "r": 255,
-      "g": 255,
-      "b": 255,
+      "r": 104,
+      "g": 148,
+      "b": 130,
       "a": 255
     },
     "_N$normalSprite": {
-      "__uuid__": "f0048c10-f03e-4c97-b9d3-3506e1d58952"
+      "__uuid__": "5cd997d9-4892-46b2-81b0-3d1f4eb296ea"
     },
     "_N$disabledSprite": {
       "__uuid__": "29158224-f8dd-4661-a796-1ffab537140e"
@@ -1734,8 +1734,8 @@
     "_opacity": 255,
     "_color": {
       "__type__": "cc.Color",
-      "r": 255,
-      "g": 255,
+      "r": 113,
+      "g": 238,
       "b": 255,
       "a": 255
     },
@@ -1868,7 +1868,7 @@
     },
     "_enabled": true,
     "_spriteFrame": {
-      "__uuid__": "f0048c10-f03e-4c97-b9d3-3506e1d58952"
+      "__uuid__": "5cd997d9-4892-46b2-81b0-3d1f4eb296ea"
     },
     "_type": 1,
     "_sizeMode": 0,
@@ -1893,19 +1893,19 @@
       "__id__": 42
     },
     "_enabled": true,
-    "transition": 2,
+    "transition": 1,
     "pressedColor": {
       "__type__": "cc.Color",
-      "r": 255,
+      "r": 20,
       "g": 255,
-      "b": 255,
+      "b": 76,
       "a": 255
     },
     "hoverColor": {
       "__type__": "cc.Color",
-      "r": 255,
-      "g": 255,
-      "b": 255,
+      "r": 0,
+      "g": 156,
+      "b": 37,
       "a": 255
     },
     "duration": 0.1,
@@ -1921,20 +1921,20 @@
     "_N$enableAutoGrayEffect": false,
     "_N$normalColor": {
       "__type__": "cc.Color",
-      "r": 255,
-      "g": 255,
+      "r": 113,
+      "g": 238,
       "b": 255,
       "a": 255
     },
     "_N$disabledColor": {
       "__type__": "cc.Color",
-      "r": 255,
-      "g": 255,
-      "b": 255,
+      "r": 104,
+      "g": 148,
+      "b": 130,
       "a": 255
     },
     "_N$normalSprite": {
-      "__uuid__": "f0048c10-f03e-4c97-b9d3-3506e1d58952"
+      "__uuid__": "5cd997d9-4892-46b2-81b0-3d1f4eb296ea"
     },
     "_N$disabledSprite": {
       "__uuid__": "29158224-f8dd-4661-a796-1ffab537140e"
@@ -7645,8 +7645,8 @@
     "_color": {
       "__type__": "cc.Color",
       "r": 255,
-      "g": 255,
-      "b": 255,
+      "g": 229,
+      "b": 35,
       "a": 255
     },
     "_cascadeOpacityEnabled": true,
@@ -7795,7 +7795,7 @@
     },
     "_enabled": true,
     "_spriteFrame": {
-      "__uuid__": "f0048c10-f03e-4c97-b9d3-3506e1d58952"
+      "__uuid__": "5cd997d9-4892-46b2-81b0-3d1f4eb296ea"
     },
     "_type": 1,
     "_sizeMode": 0,
@@ -7820,19 +7820,19 @@
       "__id__": 223
     },
     "_enabled": true,
-    "transition": 2,
+    "transition": 1,
     "pressedColor": {
       "__type__": "cc.Color",
-      "r": 255,
-      "g": 255,
-      "b": 255,
+      "r": 245,
+      "g": 127,
+      "b": 0,
       "a": 255
     },
     "hoverColor": {
       "__type__": "cc.Color",
-      "r": 255,
-      "g": 255,
-      "b": 255,
+      "r": 218,
+      "g": 166,
+      "b": 0,
       "a": 255
     },
     "duration": 0.1,
@@ -7853,19 +7853,19 @@
     "_N$normalColor": {
       "__type__": "cc.Color",
       "r": 255,
-      "g": 255,
-      "b": 255,
+      "g": 229,
+      "b": 35,
       "a": 255
     },
     "_N$disabledColor": {
       "__type__": "cc.Color",
-      "r": 255,
-      "g": 255,
-      "b": 255,
+      "r": 126,
+      "g": 89,
+      "b": 155,
       "a": 255
     },
     "_N$normalSprite": {
-      "__uuid__": "f0048c10-f03e-4c97-b9d3-3506e1d58952"
+      "__uuid__": "5cd997d9-4892-46b2-81b0-3d1f4eb296ea"
     },
     "_N$disabledSprite": {
       "__uuid__": "29158224-f8dd-4661-a796-1ffab537140e"
