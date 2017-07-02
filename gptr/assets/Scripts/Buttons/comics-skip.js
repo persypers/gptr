@@ -10,6 +10,7 @@ cc.Class({
 
     },
 
+//ставим на картинку последний тайл и открываем попап с результатами
     onClick: function () {
       this.popupNode.active = true;  
     },
