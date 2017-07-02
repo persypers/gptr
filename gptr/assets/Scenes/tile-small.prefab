@@ -122,7 +122,7 @@
     "_tag": -1,
     "_opacityModifyRGB": false,
     "_id": "",
-    "_active": true,
+    "_active": false,
     "_components": [
       {
         "__id__": 3
@@ -450,9 +450,9 @@
     "_opacity": 255,
     "_color": {
       "__type__": "cc.Color",
-      "r": 0,
-      "g": 0,
-      "b": 0,
+      "r": 255,
+      "g": 255,
+      "b": 255,
       "a": 255
     },
     "_cascadeOpacityEnabled": true,
@@ -510,8 +510,10 @@
     "_fontSize": 18,
     "_lineHeight": 22,
     "_enableWrapText": true,
-    "_N$file": null,
-    "_isSystemFontUsed": true,
+    "_N$file": {
+      "__uuid__": "09d7a920-47fa-4a8f-8633-8fe39c78c0d6"
+    },
+    "_isSystemFontUsed": false,
     "_spacingX": 0,
     "_N$string": "Инопланетяне не одобряют Ивана Грозного",
     "_N$horizontalAlign": 1,
@@ -627,7 +629,7 @@
     "node": {
       "__id__": 1
     },
-    "_enabled": true,
+    "_enabled": false,
     "_spriteFrame": {
       "__uuid__": "5cd997d9-4892-46b2-81b0-3d1f4eb296ea"
     },
