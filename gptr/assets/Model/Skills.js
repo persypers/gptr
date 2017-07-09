@@ -4,21 +4,23 @@ var not = Relations.not;
 var love = Relations.love;
 var hate = Relations.hate;
 
-var Tile = require("Tile");
-var tile = Tile.create;
+var tile = require("Tile");
 
 var Skills = {
+
 
 imply : {
     text : "->",
     icon : "Sprites/imply.png",
     inputLength : 2,
-    apply : function(p, q) { 
-    
-    if(p instanceof Array) {
-        q = p[1];
-        p = p[0];
-    }
+    apply : function(p, q) {
+        if(p instanceof Array) {
+            q = p[1];
+            p = p[0];
+        }
+        return this._apply(p, q);// || this._apply(q, p);
+    },
+    _apply : function(p, q) { 
     // (A+B)(A+C) = (A+C) 
     // (p.a p.op p.b) (q.a q.op q.b) = (res.a res.op res.b) 
     if( 

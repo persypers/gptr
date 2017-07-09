@@ -16,7 +16,10 @@ var utils = {
     },
 
     randomTile : function() {
-        return tile(utils.pickRandom(entities), utils.pickRandom(entities), utils.pickRandom(relations));
+        var a = utils.pickRandom(entities);
+        var b = utils.pickRandom(entities);
+        while(a == b) b = utils.pickRandom(entities);
+        return tile(a, b, utils.pickRandom(relations));
     }
 }
 
